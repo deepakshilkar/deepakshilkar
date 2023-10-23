@@ -182,7 +182,8 @@ params:
           url: "https://twitter.com/deepakshilkar"
         - name: mastodon
           url: "https://mastodon.social/@shilsons"
-
+        - name: datacamp
+          url: "https://www.datacamp.com/portfolio/deepakshilkar"
     # label:
     #     text: "Home"
     #     icon: icon.png
