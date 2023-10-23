@@ -1,6 +1,8 @@
 ---
-title: "Opinions" 
+title: Opinions
+slug: opinions
+date: 2023-10-23T05:02:58.852Z
 ---
 
-Content for the research section...
+
 {{< list-posts section="opinions" >}}
