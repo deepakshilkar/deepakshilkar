@@ -1,101 +1,261 @@
+baseURL: "https://deepakshilkar.in" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 title: Deepak Shilkar
-baseURL: 'https://deepakshilkar.in'
-languageCode: en-us
+paginate: 10
 theme: hugo-PaperMod
-publishDir: public
-DefaultContentLanguage: en
-SectionPagesMenu: main
-Paginate: 10
-googleAnalytics: G-L0T22MKVKM
+pluralizeListTitles: false
+
+enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+enableEmoji: true
 pygmentsUseClasses: true
+googleAnalytics: G-L0T22MKVKM
+
+minify:
+    disableXML: false
+    minifyOutput: false
+
 languages:
-  en:
-    title: Deepak Shilkar
-    weight: 1
-    contentDir: content/
-sitemap:
-  changefreq: monthly
-  priority: 0.5
-  filename: sitemap.xml
+    en:
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: Archive
+                  url: archives
+                  weight: 5
+                - name: Search
+                  url: search/
+                  weight: 10
+                - name: Tags
+                  url: tags/
+                  weight: 10
+                - identifier: research  # Added identifier
+                  name: Research
+                  url: /research/
+                  weight: 20
+                - identifier: philosophy  # Added identifier
+                  name: Philosophy
+                  url: /philosophy/
+                  weight: 30
+                - identifier: opinions  # Added identifier
+                  name: Opinions
+                  url: /opinions/
+                  weight: 40
+                - identifier: miscellaneous
+                  name: Miscellaneous
+                  url: /miscellaneous/
+                  weight: 50
+                # - name: WiKi
+                #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+                # - name: Discord
+                #   url: https://discord.gg/ahpmTvhVmp
+
+    # fr:
+    #     languageName: ":fr:"
+    #     languageAltTitle: French
+    #     weight: 2
+    #     title: PaperModL2
+    #     taxonomies:
+    #       category: FRcategories
+    #       tag: FRtags
+    #       series: FRseries
+    #     profileMode:
+    #         enabled: true
+    #         title: PaperMod
+    #         imageUrl: "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f317.svg"
+    #         imageTitle: ProfileMode image
+    #         # imageWidth: 120
+    #         # imageHeight: 120
+    #         subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+    #         buttons:
+    #             - name: Blog
+    #               url: posts
+    #             - name: Profile Mode
+    #               url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+    #     menu:
+    #         main:
+    #             - name: Archive
+    #               url: archives/
+    #               weight: 5
+    #             - name: FRTags
+    #               url: frtags
+    #               weight: 10
+    #             - name: FRCategories
+    #               url: frcategories
+    #               weight: 10
+    #             - name: FRSeries
+    #               url: frseries
+    #               weight: 10
+    #             - name: NullLink
+    #               url: "#"
+
+    # fa:
+    #     languagedirection: rtl
+    #     weight: 3
+    #     title: PaperMod RTL
+    #     homeInfoParams:
+    #         Title: "Hi there \U0001F44B"
+    #         Content: Welcome to RTL layout
+    #     taxonomies:
+    #       category: FAcategories
+    #       tag: FAtags
+    #       series: FAseries
+    #     menu:
+    #         main:
+    #             - name: FATags
+    #               url: fatags
+    #               weight: 10
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
 params:
-  env: production
-  text_color: black
-  author: Deepak Shilkar
-  favicon: /images/general/logo.png
-  site_logo: /images/general/logo.png
-  description: Personal website and blog
-  background_color_class: bg-navy
-  recent_posts_number: 20
-  disqusShortname: deepakshilkar1
-  DateFormat: 'January 2, 2006'
-  defaultTheme: auto
-  disableThemeToggle: false
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: true
-  hidemeta: false
-  hideSummary: false
-  showtoc: true
-  tocopen: true
-  images: /images/general/logo.png
-  label:
-    text: Deepak Shilkar
-    icon: /images/general/logo.png
-    iconHeight: 35
-  profileMode:
-    enabled: true
-    title: Deepak Shilkar
-    subtitle: >-
-      As one treads the path of indifference, what rules shall bind and what
-      prohibitions hinder?
-    imageUrl: logo.png
-    imageWidth: 120
-    imageHeight: 120
-    buttons:
-      - name: Academic
-        url: /academic/
-      - name: Tips
-        url: /tips/
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog. Hope you find something interesting.
-  socialIcons:
-    - name: twitter
-      url: 'https://twitter.com/deepakshilkar/'
-    - name: github
-      url: 'https://github.com/deepakshilkar/'
-    - name: linkedin
-      url: 'https://www.linkedin.com/in/deepakshilkar/'
-  analytics:
-    google:
-      SiteVerificationTag: G-L0T22MKVKM
-    bing:
-      SiteVerificationTag: AEB5BB2B5D7825F92105F1B9A815B715
-  cover:
-    hidden: false
-    hiddenInList: true
-    hiddenInSingle: true
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    keys:
-      - title
-      - permalink
-      - summary
-      - content
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    description: "Personal website and blog"
+    author: Deepak Shilkar
+    author: ["Deepak Shilkar"] # multiple authors
+    mainSections: ["research", "philosophy", "opinions"]
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: true
+    ShowReadingTime: true
+    # disableSpecial1stPost: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowToc: true
+    comments: true
+    disqusShortname: deepakshilkar1
+    images: ["papermod-cover.png"]
+
+    profileMode:
+        enabled: true
+        title: Deepak Shilkar
+        subtitle: Venturing into the unknown
+        imageUrl: "/images/logo.png"
+        imageTitle: my image
+        # imageWidth: 120
+        # imageHeight: 120
+        buttons:
+            - name: Archives
+              url: archives
+            - name: Tags
+              url: tags
+
+    homeInfoParams:
+        Title: "PaperMod"
+        Content: >
+            Welcome to demo of hugo's theme PaperMod.
+
+            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX. This starter supports editing posts with NetlifyCMS, login at /admin. Most other configs (including this message!) happen in config.yml in the root directory.
+
+            - Do give a 🌟 on Github !
+
+            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/deepakshilkar/"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/deepakshilkar/"
+        - name: googlescholar
+          url: "https://scholar.google.com/citations?user=vAe-he4AAAAJ"
+        - name: cv
+          url: "https://www.linkedin.com/in/deepakshilkar/"
+        - name: goodreads
+          url: "https://www.goodreads.com/deepakshilkar"
+        - name: orcid
+          url: "https://orcid.org/0000-0003-1882-1731"
+        - name: twitter
+          url: "https://twitter.com/deepakshilkar"
+        - name: mastodon
+          url: "https://mastodon.social/@shilsons"
+
+    # label:
+    #     text: "Home"
+    #     icon: icon.png
+    #     iconHeight: 35
+
+    analytics:
+      google:
+        SiteVerificationTag: G-L0T22MKVKM
+      bing:
+        SiteVerificationTag: AEB5BB2B5D7825F92105F1B9A815B715
+
+    assets:
+        disableHLJS: true
+    #     favicon: "<link / abs url>"
+    #     favicon16x16: "<link / abs url>"
+    #     favicon32x32: "<link / abs url>"
+    #     apple_touch_icon: "<link / abs url>"
+    #     safari_pinned_tab: "<link / abs url>"
+
+    cover:
+      hidden: false
+      hiddenInList: true
+      hiddenInSingle: true
+    fuseOpts:
+      isCaseSensitive: false
+      shouldSort: true
+      location: 0
+      distance: 1000
+      threshold: 0.4
+      minMatchCharLength: 0
+      keys:
+        - title
+        - permalink
+        - summary
+        - content
+
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+        # anchorLineNos: true
+        # codeFences: true
+        # guessSyntax: true
+        # lineNos: true
+        # style: monokai
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
+
 menu:
   main:
     - identifier: categories
@@ -106,10 +266,23 @@ menu:
       name: Search
       url: /archive/
       weight: 100
-    - identifier: about-me
-      name: About
-      url: /about/about.md
+    - identifier: research
+      name: Research
+      url: /research/
       weight: 20
+    - identifier: philosophy
+      name: Philosophy
+      url: /philosophy/
+      weight: 30
+    - identifier: opinions
+      name: Opinions
+      url: /opinions/
+      weight: 40
+    - identifier: miscellaneous
+      name: Miscellaneous
+      url: /miscellaneous/
+      weight: 50
+
 outputs:
   home:
     - HTML

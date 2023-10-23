@@ -1,0 +1,15 @@
+{{/* Get the name of the section from the shortcode parameter or default to "post" */}}
+{{ $section := .Get "section" | default "post" }}
+
+{{/* Fetch the pages from the specified section */}}
+{{ $pages := where .Site.RegularPages "Section" $section }}
+
+{{/* Start the list */}}
+<ul>
+    {{/* Range through the pages and create list items */}}
+    {{ range $pages }}
+    <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
