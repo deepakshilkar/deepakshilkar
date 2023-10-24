@@ -41,8 +41,7 @@ The assertion that "anything would be better" than this mental agony reveals the
 
 ![](https://media.tenor.com/9-onEza10BIAAAAC/nod-dietrich-hollinderbaumer.gif)
 
-On a parting note, I'll, leave you with this thought. As you contemplate the abyss of existence, what choices will you make? What meaning will you create? The journey may be dark, but it is also uniquely yours to navigate. As we reflect on our own experiences of mental anguish and the pursuit of meaning, perhaps do not shy away from the shadows but delve deeper into the enigma of existence. Perhaps you might end up discovering the flicker of purpose, meaning, and the profound beauty of crafting our own narrative.
-
+On a parting note, I'll, leave you with this thought. As you contemplate the abyss of existence, what choices will you make? What meaning will you create? 
 
 
 Until later...👋
