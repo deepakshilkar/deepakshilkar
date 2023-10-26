@@ -1,16 +1,23 @@
 ---
-
-title: "This agony of mind..."
-summary: 
+title: This agony of mind...
+summary: Some philosophical musings on the existential angst of the human experience.
 date: 2023-09-30T00:00:00+05:30
-aliases: 
-tags: ["existentialism"]
-author: "Deepak Shilkar"
+aliases:
+    - /philosophy/the-agony-of-mind/
+tags:
+    - existentialism
+author: Deepak Shilkar
+classes: wide
+read_time: true
+share: true
 draft: false
 weight: 2
 comments: true
-keywords: ["existentialism"]
-
+keywords:
+    - existentialism
+    - Sartre
+    - nihilism
+slug: agony-mind
 ---
 
 
