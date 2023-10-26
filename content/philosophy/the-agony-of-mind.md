@@ -39,7 +39,7 @@ The assertion that "anything would be better" than this mental agony reveals the
 
 <div style="width:100%;height:0;padding-bottom:57%;position:relative;"><iframe src=" https://media.tenor.com/9-onEza10BIAAAAC/nod-dietrich-hollinderbaumer.gif" width="100%" height="100%" style="position:absolute" frameBorder="0" allowFullScreen></iframe></div>
 
-On a parting note, I'll, leave you with this thought. As you contemplate the abyss of existence, what choices will you make? What meaning will you create? 
+On a parting note, I'll, leave you with this thought. As you contemplate the abyss of existence, what choices will you make? What meaning will you create?  
 
 Until later...👋
 

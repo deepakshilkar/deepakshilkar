@@ -1,5 +1,6 @@
 ---
-title: "Research" 
+title: "Research"
+slug: "research" 
 ---
 
 > **Note to visitors**: This section use to house all the protocols and minor insights I uncovered while doing lab experiments. Unfortunately, my old WordPress website was poorly secured and also not backed up well, was hacked, and all of myt word was lost. I will put up all the content back as soon as it is recovered. I have recently migrated to Hugo and I am already loving it. 
