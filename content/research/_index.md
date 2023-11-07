@@ -5,11 +5,13 @@ slug: "research"
 
 > **Note to visitors**: This section use to house all the protocols and minor insights I uncovered while doing lab experiments. Unfortunately, my old WordPress website was poorly secured and also not backed up well, was hacked, and all of myt word was lost. I will put up all the content back as soon as it is recovered. I have recently migrated to Hugo and I am already loving it. 
 
-# Research interests
+## Research interests
 I love studying the microscopic and macroscopic realms that construct our reality. My research interests span infectious diseases, aging, molecular imaging, and structural biology. I have previously worked on various research projects, including anti-dengue drug discovery, antimicrobial drug discovery against ESKAPE pathogens, and natural product chemistry. 
 
-# Selected publications
-Here is a list of my key research papers:
+## Selected publications
+**Please open the collapsible section below to view the list of publications.**
+
+<details>
 
 -   **Shilkar D**, Mohd Siddique MU, Bua S et al. Carbonic anhydrase inhibitory
     activity of phthalimide-capped benzene sulphonamide derivatives. Journal of
@@ -54,8 +56,9 @@ Here is a list of my key research papers:
     Viruses: Diseases, Treatments and Vaccines: The New Insights. Springer
     International Publishing Cham; 2021:93-120.
 
+</details>
 
-
+## Blog posts
 
 
 {{< list-posts section="research" >}}
