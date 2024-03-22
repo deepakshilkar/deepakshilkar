@@ -37,3 +37,5 @@ As long as you have access to Cryptomator and the password, the vault can be dec
 However, if you forget the password and also the backup key consider your data as gone. Therefore I highly recommend that you store the password and backup key safely, probably as multiple copies in different locations especially with the help of a password manager like [Bitwarden](https://bitwarden.com/).
 
 **Visit Cryptomator** [Click me](https://cryptomator.org/){: .btn}
+
+**Quick note**: Microsoft Onedrive may detect encrypted files as ransomware and delete them. Therefore, it is recommended to use Cryptomator with Google Drive or Dropbox. I'm not sure whether to do it intentionally or it's just the detection algorithm that's triggered.

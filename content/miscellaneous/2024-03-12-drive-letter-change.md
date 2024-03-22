@@ -19,7 +19,7 @@ aliases:
 ---
 
 
-I recently bought a Sandisk Cruzer blade, plugged and ejected several times into my PC, several times unsafely. Suddenly, it stopped being detected on that particular PC, but worked on others, including parallel boot Fedora. Below, I am providing a list of troubleshooting options that I tried to resolve the issue, along with the solution that worked. 
+I recently bought a Sandisk Cruzer blade, plugged and ejected several times into my PC, several times unsafely. Suddenly, it stopped being detected on that particular PC, but worked on others, including parallel boot Fedora. Below, I am providing a list of troubleshooting options that I tried to resolve the issue, along with the solution that worked. Of course I did not have the patience to write all of those things step by step so I asked my friend Github Copilot to do it for me. 
 
 ### 1. Windows USB Power Settings ❌
 Sometimes, Windows turns off USB devices to save power. To check and change this setting:

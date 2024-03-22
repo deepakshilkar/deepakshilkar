@@ -22,7 +22,7 @@ I was preparing files for molecular dynamics on Windows (too lazy to boot into p
 ```powershell
 
 # Define the source folder containing the files
-$sourceFolder = "F:\Projects\VJ\PPAR\Proteins"
+$sourceFolder = "F:\Projects\YourProject\YourFolder\Proteins"
 
 # Get a list of files in the source folder
 $files = Get-ChildItem -Path $sourceFolder
