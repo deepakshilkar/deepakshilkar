@@ -13,6 +13,7 @@ share: true
 draft: false
 weight: 2
 comments: true
+hasMermaid: true
 keywords:
     - existentialism
     - Sartre
@@ -39,5 +40,3 @@ As we grow (in time, but in mind?), we don't outgrow that sense of existential u
 On a parting note, I'll, leave you with this thought. As you contemplate the abyss of existence, what choices will you make? What meaning will you create?  
 
 Until later...👋
-
-
