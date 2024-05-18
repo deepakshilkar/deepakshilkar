@@ -9,5 +9,4 @@ slug: philosophy
 
 ***I dedicate this corner to all the travellers who are and will eventually be a part of this eternal graveyard.***
 
-
 {{< list-posts section="philosophy" >}}
