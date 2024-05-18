@@ -10,6 +10,7 @@ classes: wide
 read_time: true
 share: true
 related: false
+hasMermaid: true
 categories:
   - Tips
   - Tricks

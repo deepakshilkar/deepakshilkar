@@ -23,6 +23,7 @@ slug: agony-mind
 
 
 
+
 >  **Sartre said**: “Anything, anything would be better than this agony of mind, this creeping pain that gnaws and fumbles and caresses one and never hurts quite enough.”
 
 I believe this quote encapsulates the essence of existential angst and the human experience of grappling with inner turmoil and suffering. I did not understand what he had to say until very recently, when, during my quiet hours, often spent in a park observing the flow of water, it hit me hard! Sartre was deeply influenced by the intellectual and cultural climate of his time. Yes, perhaps it has nothing to do with the conditioning I have had since my childhood or even now. For nearly the past 18 years, I was only concerned about survival, making ends meet, and helping my parents run the farm while also studying. But the question of the meaning of life always bothered me. **Not whether life has some meaning, but whether there ought to be any**.
@@ -35,7 +36,7 @@ From the very moment we're born, our existence is a tumultuous journey. Picture 
 
 As we grow (in time, but in mind?), we don't outgrow that sense of existential unease; it probably only transforms into seeking alternate forms of validation. We grapple with questions that don't have easy answers. Why are we here? What's the purpose of it all? It's like trying to navigate a labyrinth with no map, where every twist and turn seems to lead us deeper into the enigma of existence. Again, if you're not bothered by these questions, please don't continue reading this portion of the blog because there is nothing like stirring up a storm when there is scope for none.
 
-<div style="width:100%;height:0;padding-bottom:57%;position:relative;"><iframe src=" https://media.tenor.com/9-onEza10BIAAAAC/nod-dietrich-hollinderbaumer.gif" width="100%" height="100%" style="position:absolute" frameBorder="0" allowFullScreen></iframe></div>
+<div style="width:100%;height:0;padding-bottom:40%;position:relative;"><iframe src=" https://media.tenor.com/9-onEza10BIAAAAC/nod-dietrich-hollinderbaumer.gif" width="100%" height="100%" style="position:absolute" frameBorder="0" allowFullScreen></iframe></div>
 
 On a parting note, I'll, leave you with this thought. As you contemplate the abyss of existence, what choices will you make? What meaning will you create?  
 
