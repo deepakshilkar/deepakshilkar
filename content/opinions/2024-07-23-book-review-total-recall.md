@@ -12,8 +12,7 @@ read_time: true
 share: true
 ---
 
-{{< center-image src="/images/20240723-01.jpg" alt="Description of image" >}}
-
+![](/images/20240723-01.jpg)
 
 I just finished reading Arnold Schwarzenegger's autobiography,**[Total Recall](https://www.google.co.in/books/edition/Total_Recall/DodDFzlpe8QC?hl=en)**, and I've got mixed feelings. The book does a good job of shattering the myth that Arnold is all brawn and no brains. From the book, I got the impression that he is actually a calculating, ambitious, and hardworking individual who achieved his goals through sheer determination. He's possibly the embodiment of the American dream, and his rags-to-riches story is undeniably inspiring. 
 
