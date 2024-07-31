@@ -5,6 +5,7 @@ date: 2024-03-12T10:00:00+08:00
 draft: false
 summary: "If your USB pendrive is not detected on a specific Windows PC but works on others, the issue might lie within the software or hardware compatibility of the problematic PC. Here are some technical methods to address the issue."
 classes: wide
+weight: 7
 read_time: true
 share: true
 related: false

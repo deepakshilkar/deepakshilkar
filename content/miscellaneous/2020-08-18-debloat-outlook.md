@@ -1,5 +1,6 @@
 ---
 layout: posts
+weight: 3
 permalink: /general/computers/debloat-outlook-part-one/
 title: "Microsoft Outlook series - Part 1: How to optimise Outlook performance"
 excerpt: "Microsoft Outlook is a handy tool. A lot of universities have a subscription to Outlook and can help people in Academia manage their email in a smart way. This is a short piece in a multipart article discussing the use of Outlook."

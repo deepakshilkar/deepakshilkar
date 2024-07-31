@@ -6,7 +6,7 @@ aliases: ["/s3-static/"]
 tags: ["AWS", "S3", "Hugo"]
 author: "Deepak Shilkar"
 draft: false
-weight: 2
+weight: 4
 comments: true
 keywords: ["AWS S3", "cloud storage", "image hosting", "cost effective", "scalability", "durability", "Amazon cloud", "digital hosting", "file storage", "reliable storage"]
 

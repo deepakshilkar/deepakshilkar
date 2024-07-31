@@ -3,6 +3,7 @@ title: "Create multiple folders with file names in PowerShell"
 permalink: /create-multiple-folders-file-names-powershell/
 date: 2023-10-25T10:00:00+08:00
 draft: false
+weight: 6
 summary: "Create multiple folders with file names in PowerShell"
 classes: wide
 read_time: true
