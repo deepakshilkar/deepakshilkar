@@ -1,93 +1,133 @@
 ---
 title: "Setting Up a Static Image Host on AWS"
-summary: 
+summary:
 date: 2023-09-05T00:00:00+05:30
 aliases: ["/s3-static/"]
 tags: ["AWS", "S3", "Hugo"]
 author: "Deepak Shilkar"
 draft: false
-weight: 2
+weight: 4
 comments: true
 keywords: ["AWS S3", "cloud storage", "image hosting", "cost effective", "scalability", "durability", "Amazon cloud", "digital hosting", "file storage", "reliable storage"]
 
 ---
+<<<<<<< HEAD
 
 I manage my Hugo site (versioning and deployment) via GitHub. One key issue with this setup is that images eventually make the repository heavier, making push and pull slower and unnecessarily gobbling GitHub's resources for purposes that it is not meant for. A common option to manage this issue is to use image hosting and resizing services like Cloudimage and Cloudkit. A key issue I have with these services is the inability to maintain a persistent backup elsewhere. Plus, this can get quickly expensive if you overshoot your Free Tier storage quota. 
+=======
+Hugo is one of the simplest ways to write and manage a blog. Yet, I totally get the frustration a lot of people express with managing images in the GitHub repository. It's like trying to fit an elephant into a Mini Cooper. I tried to address this issue using AWS S3, which I have documented below.
+>>>>>>> 618a67c843821713fcdfed60cba8a1f3bf62d6ef
 
-In this guide, I will describe my process of setting up an AWS S3 bucket for hosting static images. One disadvantage of this approach is that if you hate terminal, you are not going to like it. But then, if you hated terminal, you'd be using Squarespace and not Hugo.
+## Why AWS S3?
 
-**Step 1: Set Up an AWS Account**
-1. Visit the AWS official website: [https://aws.amazon.com/](https://aws.amazon.com/)
-2. Click on the "Create an AWS Account" button and follow the instructions to create your account.
-3. Once your account is created, log in to the AWS Management Console.
+1. It's reliable (it's Amazon, after all)
+2. You can scale up or down as needed
+3. It's pretty cost-effective for most bloggers
+4. You maintain control over your data (bye-bye, third-party image hosting services!)
 
-**Step 2: Get Security Credentials**
-1. In the AWS Management Console, navigate to security credentials page.
-2. Navigate to the "IAM" (Identity and Access Management) service.
-3. Click on "Users" in the left sidebar and then click on "Add user."
-4. Enter a name for the user (e.g., "imagehost") and select "Programmatic access."
-5. Attach an existing policy directly: Search for and select the "AmazonS3FullAccess" policy to grant full access to S3.
-6. Review the settings and create the user. Copy the access key ID and secret access key displayed on the final page.
+### Step 1: Setting Up Your AWS Account
 
-**Note:** Save these credentials safely, inside a password manager. Once you close the page, they are gone. 
+First things first, head over to [AWS](https://aws.amazon.com/) and create an account. It's like signing up for any other service, except you might need to enter your credit card info.
 
-8. ![fbb4b50fc20aac8ca90e3dba5bdb417f.png](../../static/s3/fbb4b50fc20aac8ca90e3dba5bdb417f.png "fbb4b50fc20aac8ca90e3dba5bdb417f.png")
+### Step 2: Grab Those Security Credentials
 
-**Step 3: Log into AWS CLI on Windows**
-1. Install the AWS CLI on your Windows machine by downloading the installer from [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/).
-2. Open a Command Prompt window and run the command: `aws configure`
-3. Enter the access key ID and secret access key from Step 2 when prompted.
-4. Choose a default region (e.g., "us-east-1") and set the output format to "json."
+Once you're in, we need to get you some security credentials. Here's what you do:
 
-**Step 4: Create an S3 Bucket**
-1. In the Command Prompt, run the following command to create an S3 bucket:
+1. Find the IAM service (it stands for Identity and Access Management, but who's got time for that?)
+2. Create a new user (let's call it "imagehost" - creative, I know)
+3. Give it "Programmatic access" (fancy talk for "can use APIs")
+4. Attach the "AmazonS3FullAccess" policy (we're going all in, baby!)
+5. Save those credentials like they're the nuclear launch codes
+
+### Step 3: Getting Cozy with AWS CLI
+
+Install the AWS CLI on your machine and run `aws configure`. It'll ask for those credentials you just saved. Don't forget to pick a region - "us-east-1" is a popular choice.
+
+### Step 4: Creating Your S3 Bucket
+
+Now for the fun part! We're going to create your very own S3 bucket. Run this command:
+
 ```sh
-aws s3api create-bucket --bucket your-image-host-bucket --region us-east-1
+aws s3api create-bucket --bucket your-awesome-image-bucket --region us-east-1
 ```
 
-**Step 5: Create an IAM User and Assign Bucket Permissions**
-1. In the AWS Management Console, navigate to the "IAM" service.
-2. Click on "Users" and select the IAM user you created in Step 2.
-3. Click on the "Add permissions" button.
-4. Choose "Attach existing policies directly" and search for and select the "AmazonS3FullAccess" policy.
-5. Review and add permissions.
+Replace "your-awesome-image-bucket" with something cool. Maybe "hugo-image-paradise"? 😎
 
-**Step 6: Make the S3 Bucket Public**
-1. In the AWS Management Console, navigate to the "S3" service.
-2. Select your S3 bucket ("your-image-host-bucket").
-3. Click on the "Permissions" tab and then the "Bucket Policy" option.
-4. Add the following policy to make the bucket publicly accessible. Replace "your-image-host-bucket" with your actual bucket name:
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "PublicReadGetObject",
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": ["s3:GetObject"],
-      "Resource": ["arn:aws:s3:::your-image-host-bucket/*"]
-    }
-  ]
-}
-```
+### Step 5: Making Your Bucket Public
 
-**Step 7: Upload Images and Generate URLs**
-1. Open a Command Prompt window and navigate to the folder containing your image.
-2. Run the following command to upload the image to your S3 bucket and generate a public URL:
+Make that bucket public:
+
+1. Find your bucket in the S3 service console
+2. Click on "Permissions" and then "Bucket Policy"
+3. Paste in the policy I provided earlier (don't forget to change the bucket name!)
+
+### Step 6: Uploading Images Like a Boss
+
+Ready to upload? It's as easy as pie from your console:
+
 ```sh
-aws s3 cp your-image.jpg s3://your-image-host-bucket/
+aws s3 cp your-awesome-image.jpg s3://your-awesome-image-bucket/
 ```
-Replace "your-image.jpg" with the actual image filename and "your-image-host-bucket" with your bucket name.
 
-**Step 8: Set Up a Clone for Alternative Script**
-If you're interested in using a script to upload images, you can consider using a simple Bash script. Here's an example:
+And voila! Your image is now living it up in the cloud.
+
+When you upload an image to S3 using the AWS CLI, it doesn't directly output the URL. However, we can easily construct the URL based on the S3 bucket name and the image filename. Here's how you can do it:
+
+1. After uploading your image using the AWS CLI command:
+
+```sh
+aws s3 cp your-awesome-image.jpg s3://your-awesome-image-bucket/
+```
+
+2. The URL structure for your uploaded image will typically be:
+
+```
+https://your-awesome-image-bucket.s3.amazonaws.com/your-awesome-image.jpg
+```
+
+So, to use this in your Hugo site, you'd reference it like this in your Markdown:
+
+```markdown
+![Alt text](https://your-awesome-image-bucket.s3.amazonaws.com/your-awesome-image.jpg)
+```
+
+To make this process even easier, you could create a simple bash script that uploads the image and then outputs the URL. Here's an example:
+
 ```bash
 #!/bin/bash
-aws s3 cp your-image.jpg s3://your-image-host-bucket/
-echo "Image uploaded. Public URL: https://your-image-host-bucket.s3.amazonaws.com/your-image.jpg"
-```
-Save this script to a file (e.g., `upload-image.sh`), make it executable using `chmod +x upload-image.sh`, and run it using `./upload-image.sh`.
 
-Conclusion:
-Congratulations! You've successfully set up an AWS S3 bucket for hosting static images on your blog. You can now easily upload images using either the AWS CLI or a script and embed the generated URLs in your markdown pages. This will help improve your blog's performance and user experience.
+# Check if an image file is provided
+if [ $# -eq 0 ]; then
+    echo "Please provide an image file as an argument."
+    exit 1
+fi
+
+# Set your bucket name
+BUCKET_NAME="your-awesome-image-bucket"
+
+# Get the filename from the provided path
+FILENAME=$(basename "$1")
+
+# Upload the file to S3
+aws s3 cp "$1" "s3://$BUCKET_NAME/"
+
+# Construct and output the URL
+echo "Image uploaded successfully."
+echo "URL: https://$BUCKET_NAME.s3.amazonaws.com/$FILENAME"
+```
+
+Save this script (let's call it `upload_to_s3.sh`), make it executable with `chmod +x upload_to_s3.sh`, and then you can use it like this:
+
+```sh
+./upload_to_s3.sh path/to/your-awesome-image.jpg
+```
+
+This script will upload your image and then output the full URL, which you can copy and paste into your Hugo Markdown files.
+
+## Wrapping Up
+
+There you have it! No more bloated GitHub repos, no more relying on sketchy third-party services.
+
+Keep an eye on your AWS usage to avoid any surprise bills. But for most bloggers, this setup should be both affordable and efficient.
+
+Until later!

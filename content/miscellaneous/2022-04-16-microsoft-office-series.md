@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Office Series: Word comments update"
 date: 2022-04-30T00:00:00+05:30
-# weight: 1
+weight: 5
 # aliases: ["/first"]
 tags: ["Microsoft Office, Word"]
 author: "Deepak Shilkar"
