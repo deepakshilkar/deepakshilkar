@@ -11,6 +11,7 @@ comments: true
 keywords: ["AWS S3", "cloud storage", "image hosting", "cost effective", "scalability", "durability", "Amazon cloud", "digital hosting", "file storage", "reliable storage"]
 
 ---
+
 I manage my Hugo site (versioning and deployment) via GitHub. One key issue with this setup is that images eventually make the repository heavier, making push and pull slower and unnecessarily gobbling GitHub's resources for purposes that it is not meant for. A common option to manage this issue is to use image hosting and resizing services like Cloudimage and Cloudkit. A key issue I have with these services is the inability to maintain a persistent backup elsewhere. Plus, this can get quickly expensive if you overshoot your Free Tier storage quota. 
 
 In this guide, I will describe my process of setting up an AWS S3 bucket for hosting static images. One disadvantage of this approach is that if you hate terminal, you are not going to like it. But then, if you hated terminal, you'd be using Squarespace and not Hugo.
