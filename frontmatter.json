@@ -7,9 +7,29 @@
       "previewPath": null,
       "fields": [
         {
+          "title": "layout",
+          "name": "layout",
+          "type": "string"
+        },
+        {
+          "title": "permalink",
+          "name": "permalink",
+          "type": "string"
+        },
+        {
           "title": "title",
           "name": "title",
           "type": "string"
+        },
+        {
+          "title": "excerpt",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "author_profile",
+          "name": "author_profile",
+          "type": "boolean"
         },
         {
           "title": "date",
@@ -17,14 +37,9 @@
           "type": "datetime"
         },
         {
-          "title": "draft",
-          "name": "draft",
-          "type": "datetime"
-        },
-        {
-          "title": "description",
-          "name": "description",
-          "type": "string"
+          "title": "comments",
+          "name": "comments",
+          "type": "boolean"
         },
         {
           "title": "classes",
@@ -34,17 +49,17 @@
         {
           "title": "read_time",
           "name": "read_time",
-          "type": "datetime"
+          "type": "boolean"
         },
         {
           "title": "share",
           "name": "share",
-          "type": "datetime"
+          "type": "boolean"
         },
         {
           "title": "related",
           "name": "related",
-          "type": "datetime"
+          "type": "boolean"
         },
         {
           "title": "categories",
@@ -57,9 +72,16 @@
           "type": "tags"
         },
         {
-          "title": "comment",
-          "name": "comment",
-          "type": "datetime"
+          "title": "keywords",
+          "name": "keywords",
+          "type": "choice",
+          "choices": [
+            "confirmation bias",
+            "expertise",
+            "critical thinking",
+            "epistemology",
+            "intellectual standards"
+          ]
         }
       ]
     }
