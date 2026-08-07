@@ -1,7 +1,9 @@
 baseURL: "https://deepakshilkar.in" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 title: Deepak Shilkar
-paginate: 10
 theme: hugo-PaperMod
+
+pagination:
+    pagerSize: 10
 pluralizeListTitles: false
 
 enableInlineShortcodes: true
@@ -11,7 +13,6 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-googleAnalytics: G-L0T22MKVKM
 
 minify:
     disableXML: false
@@ -19,7 +20,7 @@ minify:
 
 languages:
     en:
-        languageName: "English"
+        label: "English"
         weight: 1
         taxonomies:
           category: categories
@@ -113,16 +114,9 @@ languages:
     #               url: fatags
     #               weight: 10
 
-outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON
-
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Personal website and blog"
-    author: Deepak Shilkar
     author: ["Deepak Shilkar"] # multiple authors
     mainSections: ["research", "philosophy", "opinions"]
     defaultTheme: auto
@@ -145,9 +139,9 @@ params:
     profileMode:
         enabled: true
         title: Deepak Shilkar
-        subtitle: Venturing into the unknown
+        subtitle: Researcher, writer, and lifelong learner sharing notes on science, philosophy, and everything in between.
         imageUrl: "/images/logo.png"
-        imageTitle: my image
+        imageTitle: Deepak Shilkar
         # imageWidth: 120
         # imageHeight: 120
         buttons:
@@ -157,15 +151,9 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "PaperMod"
+        Title: "Deepak Shilkar"
         Content: >
-            Welcome to demo of hugo's theme PaperMod.
-
-            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX. This starter supports editing posts with NetlifyCMS, login at /admin. Most other configs (including this message!) happen in config.yml in the root directory.
-
-            - Do give a 🌟 on Github !
-
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+            Personal website and blog — notes on research, philosophy, opinions, and miscellaneous tech tips.
 
     socialIcons:
         - name: github
@@ -240,7 +228,7 @@ privacy:
         disabled: false
         simple: true
 
-    twitter:
+    x:
         disabled: false
         enableDNT: true
         simple: true
@@ -254,21 +242,19 @@ privacy:
         privacyEnhanced: true
 
 services:
+    googleAnalytics:
+        ID: G-L0T22MKVKM
     instagram:
         disableInlineCSS: true
-    twitter:
+    x:
         disableInlineCSS: true
 
 menu:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
     - identifier: search
       name: Search
-      url: /archive/
-      weight: 100
+      url: /search/
+      weight: 10
     - identifier: research
       name: Research
       url: /research/

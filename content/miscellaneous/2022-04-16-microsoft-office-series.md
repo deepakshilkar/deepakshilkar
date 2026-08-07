@@ -3,28 +3,24 @@ title: "Microsoft Office Series: Word comments update"
 date: 2022-04-30T00:00:00+05:30
 weight: 5
 # aliases: ["/first"]
-tags: ["Microsoft Office, Word"]
+tags:
+  - Microsoft
+  - Microsoft Word
+  - Office 365
 author: "Deepak Shilkar"
-# author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
 comments: true
-description: "How to bring back the lines in comment balloons that are remov ed in the recent updates"
+description: "How to bring back the lines in comment balloons that are removed in the recent updates"
 disableHLJS: true # to disable highlightjs
 disableShare: false
-disableHLJS: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
-
-tags:
-  - Microsoft
-  - Microsoft Word
-  - Office 365
 ---
 
 Microsoft Office appears to be suffering from the same problem that current Indian government does: they have a ton of interesting schemes and initiatives, but they cannot communicate them to the people effectively. 

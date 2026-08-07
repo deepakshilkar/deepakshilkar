@@ -13,3 +13,11 @@ hugo.linux
 /.hugo_build.lock
 
 **/.DS_Store
+
+# Node and TinaCMS local build artifacts
+node_modules/
+.env
+.env.*
+!.env.example
+static/admin/
+tina/__generated__/db/
