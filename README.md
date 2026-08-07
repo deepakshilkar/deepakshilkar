@@ -1,6 +1,6 @@
 # Deepak Shilkar's website
 
-A Hugo website using the PaperMod theme, deployed through Netlify.
+A Hugo website using the PaperMod theme, deployed through Cloudflare Pages.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ hugo server -D
 To run the site with TinaCMS, copy `.env.example` to `.env`, add the Tina Cloud credentials, and run:
 
 ```sh
-npm run dev
+npx tinacms dev -c "hugo server -D"
 ```
 
 Open `http://localhost:1313/admin` to use the editor. Changes made there are written to the Markdown files under `content/`.
@@ -33,13 +33,16 @@ Open `http://localhost:1313/admin` to use the editor. Changes made there are wri
 
 1. Create a free Tina Cloud account and project at [app.tina.io](https://app.tina.io).
 2. Connect the project to this GitHub repository and select the production branch (normally `main`).
-3. In Netlify, add the following environment variables under **Project configuration → Environment variables**:
+3. In Cloudflare Pages, add the following environment variables under **Settings → Variables and Secrets** for both Production and Preview:
    - `TINA_CLIENT_ID` — Tina Cloud client ID
    - `TINA_TOKEN` — Tina Cloud read-only token
    - `TINA_BRANCH` — the connected Git branch, normally `main`
-4. Deploy the site. Tina's editor will be available at `https://deepakshilkar.in/admin`.
+4. Configure the build:
+   - **Build command:** `npm run build`
+   - **Build output directory:** `public`
+5. Deploy the site. Tina's editor will be available at `https://deepakshilkar.in/admin`.
 
-Tina Cloud authenticates editors and commits their changes to GitHub. Netlify then rebuilds the public site from those commits. Do not commit `.env` or the Tina token.
+Tina Cloud authenticates editors and commits their changes to GitHub. Cloudflare Pages then rebuilds the public site from those commits. Do not commit `.env` or the Tina token.
 
 ## Content workflow
 
@@ -51,4 +54,4 @@ Tina provides separate collections for Research, Philosophy, Opinions, and Misce
 npm run build
 ```
 
-The Netlify build command is configured in `netlify.toml` and runs Tina's admin build before Hugo.
+Cloudflare Pages runs `npm run build`, which builds the Tina admin before generating the optimized Hugo site.

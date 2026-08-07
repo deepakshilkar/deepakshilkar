@@ -93,7 +93,11 @@ const collections: Collection[] = sections.map(([name, label]) => ({
 }));
 
 export default defineConfig({
-  branch: process.env.TINA_BRANCH || process.env.HEAD || "main",
+  branch:
+    process.env.TINA_BRANCH ||
+    process.env.CF_PAGES_BRANCH ||
+    process.env.HEAD ||
+    "main",
   clientId: process.env.TINA_CLIENT_ID || null,
   token: process.env.TINA_TOKEN || null,
   build: {

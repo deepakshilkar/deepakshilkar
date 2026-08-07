@@ -1,0 +1,67 @@
+fragment ResearchParts on Research {
+  __typename
+  title
+  date
+  draft
+  description
+  excerpt
+  slug
+  permalink
+  tags
+  categories
+  keywords
+  comments
+  showToc
+  body
+}
+
+fragment PhilosophyParts on Philosophy {
+  __typename
+  title
+  date
+  draft
+  description
+  excerpt
+  slug
+  permalink
+  tags
+  categories
+  keywords
+  comments
+  showToc
+  body
+}
+
+fragment OpinionsParts on Opinions {
+  __typename
+  title
+  date
+  draft
+  description
+  excerpt
+  slug
+  permalink
+  tags
+  categories
+  keywords
+  comments
+  showToc
+  body
+}
+
+fragment MiscellaneousParts on Miscellaneous {
+  __typename
+  title
+  date
+  draft
+  description
+  excerpt
+  slug
+  permalink
+  tags
+  categories
+  keywords
+  comments
+  showToc
+  body
+}
